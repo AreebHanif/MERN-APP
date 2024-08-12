@@ -1,0 +1,61 @@
+.user-info {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add some padding for better layout on smaller screens */
+}
+
+.user-data {
+    height: auto; /* Allow the height to adjust based on content */
+    width: 90%; /* Adjust the width to be a percentage */
+    max-width: 500px; /* Set a maximum width */
+    box-shadow: 1px 5px 8px grey;
+    padding: 20px; /* Add some padding for better layout on smaller screens */
+    background-color: white; /* Ensure the background color is set */
+    border-radius: 8px; /* Add some rounded corners */
+}
+
+.user-all-data {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    margin-top: 20px;
+    font-weight: bold;
+}
+.loader-div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8); /* Optional: add a semi-transparent background to indicate loading */
+    z-index: 9999; /* Ensure the loader appears on top of other content */
+}
+
+.loader {
+    position: relative;
+}
+
+/* 
+#form-btn {
+    position: relative;
+    bottom: -20px; 
+} */
+
+/* Media queries for larger screens */
+@media (min-width: 600px) {
+    .user-all-data {
+        flex-direction: row; /* Change to row layout on larger screens */
+        justify-content: space-around; /* Distribute space around items */
+    }
+
+    #form-btn {
+        bottom: -140px; /* Reset to original position */
+    }
+}
