@@ -41,7 +41,7 @@ export default function Contact() {
     const { name, email, message } = contactData;
 
     try {
-      const res = await fetch("/contact", {
+      const res = await fetch("http://localhost:5000/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

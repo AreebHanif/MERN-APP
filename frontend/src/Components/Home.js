@@ -7,7 +7,7 @@ export default function Home() {
 
   const callHomePage = async () => {
     try {
-      const res = await fetch("/getcontact", {
+      const res = await fetch("http://localhost:5000/getcontact", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

@@ -9,7 +9,7 @@ export default function About({ log }) {
 
   const callAboutPage = async () => {
     try {
-      const res = await fetch("/profile", {
+      const res = await fetch("http://localhost:5000/profile", {
         method: "GET",
         headers: {
           Accept: "application/json",
@@ -40,7 +40,7 @@ export default function About({ log }) {
 
   const logout = async () => {
     try {
-      const res = await fetch("/logout", {
+      const res = await fetch("http://localhost:5000/logout", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
