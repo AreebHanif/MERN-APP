@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import "./about.css";
 
@@ -7,7 +7,7 @@ export default function About({ log }) {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  const callAboutPage = async () => {
+  const callAboutPage = useCallback(async () => {
     try {
       const res = await fetch("http://localhost:5000/profile", {
         method: "GET",
@@ -32,11 +32,11 @@ export default function About({ log }) {
     } catch (error) {
       setMessage("An error occurred");
     }
-  };
+  }, [navigate]);
 
   useEffect(() => {
     callAboutPage();
-  }, []);
+  }, [callAboutPage]);
 
   const logout = async () => {
     try {
