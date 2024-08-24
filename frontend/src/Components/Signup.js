@@ -44,7 +44,7 @@ export default function Signup() {
     
             const res = await response.json();
             if (response.status === 201) {
-                console.log("User registered successfully:Login now");
+                console.log("User registered successfully:Login now",res.msg);
                 navigate("/login");
             }
             else if(response.status === 422 || response.status === 400){
